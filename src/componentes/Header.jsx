@@ -1,70 +1,43 @@
-import React,{useState} from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './Header.css';
-import {
-    Navbar,
-    NavbarBrand,
-    NavbarToggler,
-    Collapse,
-    Nav,
-    NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    NavbarText
- } from 'reactstrap'
+import React from "react";
+import { Navbar, Button } from "rbx";
+import Logo from './imgs/logo.png'
 
-export default function Header(props){
-
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
-
-    
+export default function Header(){
     return(
-            <div>
-                <Navbar
-                    color="warning"
-                    expand="md"
-                    fixed="top"
-                    light
-                >
-                    <NavbarBrand href="/">
-                    <p className="Font">Saúde A+</p>
-                    </NavbarBrand>
-                    <NavbarToggler onClick={toggle} />
-                    <Collapse isOpen={isOpen} navbar>
-                    <Nav
-                        className="me-auto"
-                        navbar
-                    >
-                        <NavItem>
-                            <NavLink href="Modalidade.jsx">
-                                Modalidades
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="Horario.jsx">
-                                Horários
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="Professor.jsx">
-                                Professores
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="Perfil.jsx">
-                                Perfil
-                            </NavLink>
-                        </NavItem>                    
-                    </Nav>
-                    <NavbarText>
-                        Login
-                    </NavbarText>
-                    </Collapse>
-                </Navbar>
-            </div>
+        <header className="header">
+            <Navbar>
+                <Navbar.Brand>
+                    <Navbar.Item href="#">
+                    <img
+                        src={Logo}
+                        alt=""
+                        role="presentation"
+                        width="162"
+                        height="162"
+                    />
+                    </Navbar.Item>
+                    <Navbar.Burger />
+                </Navbar.Brand>
+                <Navbar.Menu>
+                    <Navbar.Segment align="start">
+                        <Navbar.Item>Inicio</Navbar.Item>
+                        <Navbar.Item>Agende Sua Aula</Navbar.Item>
+                        <Navbar.Item>Modalidades</Navbar.Item>
+                        <Navbar.Item>Horários</Navbar.Item>             
+                    </Navbar.Segment>
+
+                    <Navbar.Segment align="end">
+                    <Navbar.Item>
+                        <Button.Group>
+                        <Button color="info">
+                            <strong>Cadastre-se</strong>
+                        </Button>
+                        <Button color="light">Entrar</Button>
+                        </Button.Group>
+                    </Navbar.Item>
+                    </Navbar.Segment>
+                </Navbar.Menu>
+            </Navbar>
+        </header>
     )
 }
