@@ -28,14 +28,6 @@ const images = [
         thumbnail: '/imgs/thumb/banner3.png',
     },
     {
-        original: '/imgs/original/banner4.png',
-        thumbnail: '/imgs/thumb/banner4.png',
-    },
-    {
-        original: '/imgs/original/banner5.png',
-        thumbnail: '/imgs/thumb/banner5.png',
-    },
-    {
         original: '/imgs/original/banner6.jpg',
         thumbnail: '/imgs/thumb/banner6.jpg',
     }
