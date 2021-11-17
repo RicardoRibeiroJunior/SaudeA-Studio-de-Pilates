@@ -1,6 +1,6 @@
 import React from 'react';
-import 'rbx/index.css';
 import "react-image-gallery/styles/css/image-gallery.css";
+import 'rbx/index.css';
 import ImageGallery from 'react-image-gallery';
 import Iframe from 'react-iframe';
 import {
@@ -39,7 +39,7 @@ export default function Home(){
         <Container>
             <ColumnGroup>
                 <Column>
-                    <Title className="title">Pilates</Title>
+                    <Title className="title">Studio de Pilates Saúde A+</Title>
                     <Container>
                         <ColumnGroup>
                             <Column size="full">
@@ -53,51 +53,38 @@ export default function Home(){
                             <Column>
                                 <Message color="link">
                                     <Message.Header>
-                                        <p>Hello world</p>
+                                        <p>Jornada Sul-Americana de Pilates</p>
                                         <Delete as="button" />
                                     </Message.Header>
                                     <Message.Body>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
-                                        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec
-                                        nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                                        diam, et dictum <a href="#felis">felis venenatis</a> efficitur. Aenean ac{' '}
-                                        <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                        sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a
-                                        neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                        A Jornada Sul-Americana de Pilates é o evento mais charmoso que reúne os maiores nomes nacionais e internacionais do Pilates em três dias de pura imersão no método!
+                                        Além de você adquirir um conhecimento incrível e conhecer novas pessoas, você também poderá desfrutar de um hotel em Gramado no Rio Grande do Sul e, ainda, participar da única premiação do Pilates: o Prêmio Contrology, conhecido como o Oscar do Pilates.
                                     </Message.Body>
                                 </Message>
                             </Column>
                             <Column>
                                 <Message color="link">
                                     <Message.Header>
-                                        <p>Hello world</p>
+                                        <p>Encontro Brasileiro de Pilates</p>
                                         <Delete as="button" />
                                     </Message.Header>
                                     <Message.Body>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
-                                        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec
-                                        nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                                        diam, et dictum <a href="#felis">felis venenatis</a> efficitur. Aenean ac{' '}
-                                        <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                        sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a
-                                        neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                    O Encontro Brasileiro de Pilates é a maior evento de Pilates da América do Sul, realizado todos os anos pela VOLL Pilates Group. É uma oportunidade incrível para você, instrutor adquirir conhecimento com workshops e palestrantes consagrados de diferentes nacionalidades.
+
+                                    No evento você poderá aprimorar seus conhecimentos sobre diversas áreas do método, como Pilates Clássico, Contemporâneo, Pilates para Gestantes, Pilates para Idosos, Treinamento Funcional, Pilates aplicado à Coluna ou às Fáscias, e muito mais!
                                     </Message.Body>
                                 </Message>
                             </Column>
                             <Column>
                                 <Message color="link">
                                     <Message.Header>
-                                        <p>Hello world</p>
+                                        <p>Meeting Floripa</p>
                                         <Delete as="button" />
                                     </Message.Header>
                                     <Message.Body>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
-                                        <strong>Pellentesque risus mi</strong>, tempus quis placerat ut, porta nec
-                                        nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus
-                                        diam, et dictum <a href="#felis">felis venenatis</a> efficitur. Aenean ac{' '}
-                                        <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
-                                        sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a
-                                        neque. Donec dui urna, vehicula et sem eget, facilisis sodales sem.
+                                    O Meeting Floripa é uma mistura de Pilates e Treinamento Funcional em Workshops ministrados por profissionais experts nacionais e internacionais em uma das ilhas mais bonitas do Brasil: Florianópolis!
+
+                                    São três dias de treinamentos completos e essenciais, em que você realiza networking com pessoas de todo o Brasil e, ainda, vivencia uma experiência inacreditável para agregar a sua carreira!
                                     </Message.Body>
                                 </Message>
                             </Column>

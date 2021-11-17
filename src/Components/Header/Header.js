@@ -1,6 +1,8 @@
 import React from "react";
 import { Navbar, Button } from "rbx";
-import Logo from './imgs/logo.png'
+import Logo from '../imgs/logo.png';
+import 'rbx/index.css';
+import { Link } from 'react-router-dom';
 
 export default function Header(){
     return(
@@ -20,10 +22,10 @@ export default function Header(){
                 </Navbar.Brand>
                 <Navbar.Menu>
                     <Navbar.Segment align="start">
-                        <Navbar.Item>Inicio</Navbar.Item>
-                        <Navbar.Item>Agende Sua Aula</Navbar.Item>
-                        <Navbar.Item>Modalidades</Navbar.Item>
-                        <Navbar.Item>Horários</Navbar.Item>             
+                        <Navbar.Item><Link to="/">Inicio</Link></Navbar.Item>
+                        <Navbar.Item><Link to="/class-schedule">Agende Sua Aula</Link></Navbar.Item>
+                        <Navbar.Item><Link to="/modality">Modalidades</Link></Navbar.Item>
+                        <Navbar.Item><Link to="/schedule">Horários</Link></Navbar.Item>             
                     </Navbar.Segment>
 
                     <Navbar.Segment align="end">

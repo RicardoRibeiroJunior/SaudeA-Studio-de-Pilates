@@ -1,5 +1,6 @@
 import React from "react";
 import { Content} from "rbx"; 
+import 'rbx/index.css';
 
 export default function Footer(){                             
 
