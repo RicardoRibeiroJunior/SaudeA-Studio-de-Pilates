@@ -1,21 +1,24 @@
 import React from "react";
 import { Content} from "rbx"; 
 import 'rbx/index.css';
+import './Footer.css';
 
 export default function Footer(){                             
 
     return(
-        <footer class="hero is-info footer">
-            <div class="hero-body">
-                <footer>
-                    <Content textAlign="centered">
-                        <p>
-                        <strong>Saúde A+</strong>.
-                        © Copyright 2016. Studio de Pilates - Todos os direitos reservados.
-                        </p>
-                    </Content>
-                </footer>
-            </div>
-        </footer>
+        <div className="margem-footer">
+            <footer class="hero is-link is-small footer">
+                <div class="hero-body">
+                    <footer>
+                        <Content textAlign="centered">
+                            <p>
+                            <strong>Saúde A+</strong>.
+                            © Copyright 2016. Studio de Pilates - Todos os direitos reservados.
+                            </p>
+                        </Content>
+                    </footer>
+                </div>
+            </footer>
+        </div>
     )
 }

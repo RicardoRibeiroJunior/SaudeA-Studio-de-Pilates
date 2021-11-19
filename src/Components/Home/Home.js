@@ -1,6 +1,7 @@
 import React from 'react';
 import "react-image-gallery/styles/css/image-gallery.css";
 import 'rbx/index.css';
+import './Home.css';
 import ImageGallery from 'react-image-gallery';
 import Iframe from 'react-iframe';
 import {
@@ -11,25 +12,26 @@ import {
     Column
 } from "rbx";
 
+
 import { ColumnGroup } from 'rbx/grid/columns/column-group';
 
 
 const images = [
     {
-        original: '/imgs/original/banner1.jpg',
-        thumbnail: '/imgs/thumb/banner1.jpg',
+        original: '/imgs/original/banner1.png',
+        thumbnail: '/imgs/thumb/banner1.png',
     },
     {
-        original: '/imgs/original/banner2.png',
-        thumbnail: '/imgs/thumb/banner2.png',
+        original: '/imgs/original/banner2.jpg',
+        thumbnail: '/imgs/thumb/banner2.jpg',
     },
     {
         original: '/imgs/original/banner3.png',
         thumbnail: '/imgs/thumb/banner3.png',
     },
     {
-        original: '/imgs/original/banner6.jpg',
-        thumbnail: '/imgs/thumb/banner6.jpg',
+        original: '/imgs/original/banner4.jpg',
+        thumbnail: '/imgs/thumb/banner4.jpg',
     }
 ]
 
@@ -39,15 +41,22 @@ export default function Home(){
         <Container>
             <ColumnGroup>
                 <Column>
-                    <Title className="title">Studio de Pilates Saúde A+</Title>
                     <Container>
                         <ColumnGroup>
-                            <Column size="full">
-                                <ImageGallery className="image-gallery image-gallery-icon" items={images} autoPlay={true}/> 
+                            <Column>
+                                <section class="hero">
+                                    <ImageGallery className="image-gallery image-gallery-icon" items={images} autoPlay={true}/>
+                                </section> 
                             </Column>
                         </ColumnGroup>
                     </Container>
-                    <Title className="title">Principais Notícias</Title>
+
+                    <section className="margem-titulo">
+                        <div class="container has-text-centered">
+                            <Title className="title is-4"> Principais Notícias</Title>
+                        </div>
+                    </section>
+                    
                     <Container>
                         <ColumnGroup>
                             <Column>
@@ -90,7 +99,13 @@ export default function Home(){
                             </Column>
                         </ColumnGroup>
                     </Container>
-                    <Title className="title">Onde Estamos</Title>
+                   
+                    <section className="margem-titulo">
+                        <div class="container has-text-centered">
+                            <Title className="title is-4">Onde estamos</Title>
+                        </div>
+                    </section>
+
                     <Container>
                         <ColumnGroup>
                             <Column>

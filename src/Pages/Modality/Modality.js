@@ -2,13 +2,14 @@ import React from "react";
 
 import ComponentsModality from '../../Components/Modality/Modality';
 import ComponentsHeader from '../../Components/Header/Header';
-import UiContainer from '../../Components/UI/Container/Container';
+import ComponentsFooter from '../../Components/Footer/Footer';
 
 export default function Modality(){
     return(
-        <UiContainer>
+        <div>
             <ComponentsHeader/>
             <ComponentsModality/>
-        </UiContainer>
+            <ComponentsFooter/>
+        </div>
     )
 }

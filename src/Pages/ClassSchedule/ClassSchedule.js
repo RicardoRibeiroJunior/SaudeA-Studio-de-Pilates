@@ -1,14 +1,15 @@
 import React from "react";
 
-import UiContainer from '../../Components/UI/Container/Container';
 import ComponentsHeader from '../../Components/Header/Header';
 import ComponentsClassSchedule from '../../Components/ClassSchedule/ClassSchedule';
+import ComponentsFooter from '../../Components/Footer/Footer';
 
 export default function ClassSchedule(){
     return(
-        <UiContainer>
+        <div>
             <ComponentsHeader/>
             <ComponentsClassSchedule/>
-        </UiContainer>
+            <ComponentsFooter/>
+        </div>
     )
 }
