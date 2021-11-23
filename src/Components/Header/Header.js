@@ -3,9 +3,20 @@ import { Navbar, Button } from "rbx";
 import Logo from '../imgs/logo.png';
 import 'rbx/index.css';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Header(){
+
+    const navigate = useNavigate();
+
+    const handleClickRegister = () =>{
+        navigate('/form-register');
+    }
+
+    const handleClick = () =>{
+        navigate('/form-login');
+    }
+
     return(
         <div>
             <section class="hero is-bold is-link">
@@ -46,10 +57,10 @@ export default function Header(){
                             <Navbar.Segment align="end">
                             <Navbar.Item>
                                 <Button.Group>
-                                <Button color="info">
+                                <Button color="success" onClick={handleClickRegister}>
                                     <strong>Cadastre-se</strong>
                                 </Button>
-                                <Button color="light">Entrar</Button>
+                                <Button color="light" onClick={handleClick}>Entrar</Button>
                                 </Button.Group>
                             </Navbar.Item>
                             </Navbar.Segment>
