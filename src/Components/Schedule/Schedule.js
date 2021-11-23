@@ -1,9 +1,10 @@
+import { Title } from "rbx";
 import React from "react";
 
 export default function Schedule(){
     return(
         <div>
-            <h1>Horários</h1>
+            <Title>Horários</Title>
         </div>
     )
 }
