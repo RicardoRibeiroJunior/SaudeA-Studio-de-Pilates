@@ -25,3 +25,8 @@
     height: 36px;
     padding: 0 10px;
 }
+
+.mensagem{
+    color: red;
+    font-size: 12px;
+}
