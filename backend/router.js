@@ -10,7 +10,7 @@ const urlencodedParser = bodyParser.urlencoded({
 router.post('/', urlencodedParser, (req, res) => {
     const { nome, cpf, endereco, data_nasc, email, senha } = req.body
     let sql = `insert into usuario (nome,cpf,endereco,data_nasc,email,senha) 
-               values(${nome},${cpf},${endereco},${data_nasc},${email}, ${senha})`
+               values('${nome}','${cpf}','${endereco}','${data_nasc}','${email}', '${senha}')`
     con.query(sql, (erro, rows, fields) => {
         if (erro) throw erro
         res.json({ status: "Usuario cadastrado com sucesso!" })
