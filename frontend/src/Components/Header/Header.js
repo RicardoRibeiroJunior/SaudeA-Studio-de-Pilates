@@ -49,9 +49,9 @@ export default function Header(){
                         <Navbar.Menu>
                             <Navbar.Segment align="start">
                                 <Navbar.Item><Link to="/">Inicio</Link></Navbar.Item>
-                                <Navbar.Item><Link to="/class-schedule">Agende Sua Aula</Link></Navbar.Item>
                                 <Navbar.Item><Link to="/modality">Modalidades</Link></Navbar.Item>
-                                <Navbar.Item><Link to="/schedule">Horários</Link></Navbar.Item>             
+                                <Navbar.Item><Link to="/schedule">Horários</Link></Navbar.Item>
+                                <Navbar.Item><Link to="/class-schedule">Agende Sua Aula</Link></Navbar.Item>             
                             </Navbar.Segment>
 
                             <Navbar.Segment align="end">
