@@ -40,6 +40,17 @@ router.put('/:id', (req, res) => {
     })
 })
 
+router.delete('/:id', (req, res) => {
+    const { id } = req.params
+
+    let sql =`delete from usuario where id = '${id}'`
+
+    con.query(sql, (erro, rows, fields) => {
+        if (erro) throw erro
+        res.json({ status: 'usuario excluído com sucesso!' })
+    })
+})
+
 
 
 module.exports = router
