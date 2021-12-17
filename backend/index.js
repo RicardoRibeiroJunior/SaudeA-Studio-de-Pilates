@@ -4,7 +4,7 @@ const express = require('express')
 
 const app = express()
 
-const port = 3000
+const port = 5000
 
 
 
@@ -14,7 +14,7 @@ app.use(express.json())
 // criando variavel para armazenar todas as rotas deinifidos no rotas js
 const routerUser = require('./router')
 
-// para todas as rotas definidas em no arquivo rotas.js, deve ser considerado o caminho /tarefas
+// para todas as rotas definidas em no arquivo rotas.js, deve ser considerado o caminho /user
 app.use('/user', routerUser)
 
 app.listen(port, () => {
