@@ -6,6 +6,9 @@ const app = express()
 
 const port = 5000
 
+var cors = require('cors')
+
+app.use(cors()) 
 
 
 // utilizar arquivo no formato json
