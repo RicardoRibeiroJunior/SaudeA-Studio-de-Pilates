@@ -20,7 +20,7 @@ router.post('/', urlencodedParser, (req, res) => {
 
 
 router.get('/', (req, res) => {
-    let sql = 'select * from usuario order by nome asc'
+    let sql = 'select * from usuario order by id asc'
     con.query(sql, (erro, rows, fields) => {
         if (erro) throw erro
         res.json(rows)
