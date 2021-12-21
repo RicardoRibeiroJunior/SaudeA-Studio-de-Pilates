@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
+import { Link } from 'react-router-dom';
+
 
 import 'rbx/index.css';
 
@@ -81,8 +83,17 @@ export default function Register(){
                                 <input id="password" name="password" type="text" label="Digite sua senha" onChange={onChange}/>
                             </div>
 
-                            <div>
-                                <Button color="success" type="submit">Salvar</Button>
+                            <div className="form-button">
+                                <div>
+                                    <Button color="success" type="submit">Salvar</Button>
+                                </div>
+                                <form>
+                                    <div>
+                                        <Button color="ligth" type="submit">
+                                            <Link to="/list" className="btn">Editar</Link>
+                                        </Button>
+                                    </div>
+                                </form>
                             </div>
                         </form>                            
                 </div>

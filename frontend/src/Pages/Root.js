@@ -11,6 +11,7 @@ import PagesClassSchedule from './ClassSchedule/ClassSchedule';
 import PagesSchedule from './Schedule/Schedule';
 import PagesFormLogin from './Form/Login';
 import PagesFormRegister from './Form/Register';
+import PagesUserList from './UsersList/PagesUsersList';
 
 
 export default function Root(){
@@ -23,6 +24,9 @@ export default function Root(){
                 <Route path="/schedule" element={<PagesSchedule/>}/>
                 <Route path="/form-login" element={<PagesFormLogin/>}/>
                 <Route path="/form-register" element={<PagesFormRegister/>}/>
+                <Route path="/edit/:id" element={<PagesFormRegister/>}/>
+                <Route path="/delete/:id" element={<PagesUserList/>}/>
+                <Route path="/list" element={<PagesUserList/>}/>
             </Routes>
         </Router>
     )

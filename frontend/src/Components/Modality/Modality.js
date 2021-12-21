@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, Card, Image, Media, Content } from "rbx";
+import { Title} from "rbx";
 
 import ImgsMatPilates from '../imgs/mat-pilates.jpg';
 import ImgPilatesAcrobatico from '../imgs/pilates-acrobatico.jpg';
