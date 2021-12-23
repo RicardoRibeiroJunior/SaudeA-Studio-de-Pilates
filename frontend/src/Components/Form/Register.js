@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
@@ -15,18 +15,29 @@ import "./Register.css";
 import { Button } from "rbx";
 
 const initialValue = {
-    name:'',
+    nome:'',
     cpf:'',
-    address:'',
-    birthDate:'',
+    endereco:'',
+    data_nasc:'',
     email:'',
-    password:'',
+    senha:'',
 }
 
-export default function Register(){
+export default function Register({id}){
 
-    const [values, setValues] = useState(initialValue);
+    const [values, setValues] = useState(id ? null : initialValue);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if(id){
+            axios.get(`http://localhost:5000/user/${id}`)
+                .then((response) =>{
+                    setValues(response.data);
+                })
+        }
+    }, []);
+
+    console.log(values)
     
     function onChange(ev) {
         const { name, value } = ev.target;
@@ -36,11 +47,14 @@ export default function Register(){
     
     function onSubmit(ev) {
         ev.preventDefault();
+
+        const method = id ? 'put' : 'post';
+
+        const url = id ? `http://localhost:5000/user/${id}` : `http://localhost:5000/user`;
     
-        axios
-            .post('http://localhost:5000/user', values)
+        axios[method](url, values)
             .then((response) => {
-            navigate('/');
+            navigate('/list');
         });
     }
 

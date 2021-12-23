@@ -1,8 +1,12 @@
 import React from "react";
-import PagesFormRegister from '../../Components/Form/Register';
+import { useParams } from "react-router";
+import FormRegister from '../../Components/Form/Register';
 
 export default function Register(){
+
+    const {id} = useParams();
+
     return(
-        <PagesFormRegister/>
+        <FormRegister id={id ? Number.parseInt(id, 10) : null}/>
     )
 }

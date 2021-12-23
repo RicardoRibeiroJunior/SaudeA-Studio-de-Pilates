@@ -27,6 +27,15 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/:id', (req, res) => {
+    const { id } = req.params
+    let sql = `select * from usuario where id = '${id}'`
+    con.query(sql, (erro, rows, fields) => {
+        if (erro) throw erro
+        res.json(rows)
+    })
+})
+
 router.put('/:id', (req, res) => {
     const { id } = req.params
     const { nome, cpf, endereco, data_nasc, email, senha } = req.body
