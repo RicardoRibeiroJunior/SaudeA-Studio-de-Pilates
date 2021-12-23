@@ -4,6 +4,8 @@ import "./UserCard.css";
 
 
 export default function UserCard({user}){
+
+
     return(
         <div className="user-card">
                 <h1 className="user-card__title">{user.id}</h1>
@@ -14,7 +16,7 @@ export default function UserCard({user}){
                 <h1 className="user-card__title">{user.email}</h1>
                 <h1 className="user-card__title">{user.senha}</h1>
                 <Link to={`/edit/${user.id}`}>Editar</Link>
-                <Link to={`/delete/${user.id}`}>Excluir</Link>
+                <Link to={`/delete/${user.id}`} >Excluir</Link>
         </div>
     )
 }
