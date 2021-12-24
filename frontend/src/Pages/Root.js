@@ -10,9 +10,10 @@ import PagesModality from './Modality/Modality';
 import PagesClassSchedule from './ClassSchedule/ClassSchedule';
 import PagesSchedule from './Schedule/Schedule';
 import PagesFormLogin from './Form/Login';
-import PagesFormRegister from './Form/Register';
+import FormRegister from '../Components/Form/Register';
 import PagesUserList from './UsersList/PagesUsersList';
-import UserCard from "../Components/Card/UserCard";
+import PagesFormDelete from "./Form/Delete";
+import PagesFormEdit from './Form/Edit';
 
 
 export default function Root(){
@@ -24,9 +25,9 @@ export default function Root(){
                 <Route path="/modality" element={<PagesModality/>}/>
                 <Route path="/schedule" element={<PagesSchedule/>}/>
                 <Route path="/form-login" element={<PagesFormLogin/>}/>
-                <Route path="/form-register" element={<PagesFormRegister/>}/>
-                <Route path="/edit/:id" element={<PagesFormRegister/>}/>
-                <Route path="/delete/:id" element={<UserCard/>}/>
+                <Route path="/form-register" element={<FormRegister/>}/>
+                <Route path="/edit/:id" element={<PagesFormEdit/>}/>
+                <Route path="/delete/:id" element={<PagesFormDelete/>}/>
                 <Route path="/list" element={<PagesUserList/>}/>
             </Routes>
         </Router>

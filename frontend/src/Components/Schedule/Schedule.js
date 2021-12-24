@@ -1,4 +1,3 @@
-import { Title } from "rbx";
 import React from "react";
 import "./Schedule.css";
 

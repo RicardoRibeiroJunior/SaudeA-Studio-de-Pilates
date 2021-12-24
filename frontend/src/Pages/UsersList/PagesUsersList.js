@@ -13,7 +13,7 @@ export default function PagesUsersList(){
     <div>
       <Header/>
       <section className="margem-titulo">
-        <div class="container has-text-centered">
+        <div className="container has-text-centered">
             <Title className="title is-4"> Lista de Usuários </Title>
         </div>
       </section>

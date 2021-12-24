@@ -19,20 +19,20 @@ export default function Header(){
 
     return(
         <div>
-            <section class="hero is-bold is-link">
-                <div class="hero-body">
-                            <div class="container has-text-centered">
-                                <h1 class="title">
+            <section className="hero is-bold is-link">
+                <div className="hero-body">
+                            <div className="container has-text-centered">
+                                <h1 className="title">
                                     Saúde A+
                                 </h1>
-                                <p class="subtitle">
+                                <p className="subtitle">
                                     Studio de Pilates.
                                 </p>
                             </div>
                         </div>
             </section>
-            <section class = "hero margem-header">
-                <div class="hero-head">
+            <section className = "hero margem-header">
+                <div className="hero-head">
                     <Navbar>
                         <Navbar.Brand>
                             <Navbar.Item href="#">

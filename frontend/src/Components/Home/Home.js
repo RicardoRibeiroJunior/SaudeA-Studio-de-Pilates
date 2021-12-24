@@ -44,7 +44,7 @@ export default function Home(){
                     <Container>
                         <ColumnGroup>
                             <Column>
-                                <section class="hero">
+                                <section className="hero">
                                     <ImageGallery className="image-gallery image-gallery-icon" items={images} autoPlay={true}/>
                                 </section> 
                             </Column>
@@ -52,7 +52,7 @@ export default function Home(){
                     </Container>
 
                     <section className="margem-titulo">
-                        <div class="container has-text-centered">
+                        <div className="container has-text-centered">
                             <Title className="title is-4"> Principais Notícias</Title>
                         </div>
                     </section>
@@ -101,7 +101,7 @@ export default function Home(){
                     </Container>
                    
                     <section className="margem-titulo">
-                        <div class="container has-text-centered">
+                        <div className="container has-text-centered">
                             <Title className="title is-4">Onde estamos</Title>
                         </div>
                     </section>

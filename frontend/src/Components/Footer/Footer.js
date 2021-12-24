@@ -7,8 +7,8 @@ export default function Footer(){
 
     return(
         <div className="margem-footer">
-            <footer class="hero is-link is-small footer">
-                <div class="hero-body">
+            <footer className="hero is-link is-small footer">
+                <div className="hero-body">
                     <footer>
                         <Content textAlign="centered">
                             <p>
