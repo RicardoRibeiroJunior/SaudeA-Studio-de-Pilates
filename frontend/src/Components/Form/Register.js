@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
 
 import { Link } from 'react-router-dom';
+
+import {useFormik} from 'formik';
+import * as yup from 'yup';
 
 
 import 'rbx/index.css';
@@ -14,39 +17,43 @@ import UiContainer from '../../Components/UI/Container/Container';
 import "./Register.css";
 import { Button } from "rbx";
 
-const initialValue = {
-    nome:'',
-    cpf:'',
-    endereco:'',
-    data_nasc:'',
-    email:'',
-    senha:'',
-}
 
 export default function Register(){
 
-    const [values, setValues] = useState(initialValue);
     const navigate = useNavigate();
 
-   
-    function onChange(ev) {
-        const { name, value } = ev.target;
-    
-        setValues({ ...values, [name]: value });
-    }
-    
-    function onSubmit(ev) {
-        ev.preventDefault();
+    const formik = useFormik({
 
-        const method = 'post';
+        initialValues:{
+            name:'',
+            cpf:'',
+            address:'',
+            birthDate:'',
+            email:'',
+            password:'',
+        },
 
-        const url = `http://localhost:5000/user`;
+        validationSchema:yup.object({
+            name: yup.string().required('Campo obrigatório'),
+            cpf: yup.string().required('Campo obrigatório'),
+            address: yup.string().required('Campo obrigatório'),
+            birthDate: yup.string().required('Campo obrigatório'),
+            email: yup.string().required('Campo obrigatório'),
+            password: yup.string().required('Campo obrigatório'),
+        }),
+
+        onSubmit: values => {
+            const method = 'post';
+
+            const url = `http://localhost:5000/user`;
     
-        axios[method](url, values)
-            .then((response) => {
-            navigate('/list');
-        });
-    }
+            axios[method](url, values)
+                .then((response) => {
+                navigate('/list');
+            });
+        },
+
+    });
 
     return(
         <div>
@@ -56,36 +63,59 @@ export default function Register(){
                 <div>
                     <h1 className="title">Cadastre-se</h1>                    
 
-                        <form onSubmit={onSubmit}>
+                        <form onSubmit={formik.handleSubmit}>
                             <div className="form__group">
                                 <label htmlFor="name">Nome</label>
-                                <input id="name" name="name" type="text" label="Digite seu nome" onChange={onChange}/>
+                                <input id="name" name="name" type="text" label="Digite seu nome" onChange={formik.handleChange} value={formik.values.name}/>
                             </div>
+                            {formik.touched.name && formik.errors.name ? (
+                                <div className="mensagem">{formik.errors.name}</div>
+                            ) : null}
 
                             <div className="form__group">
                                 <label htmlFor="cpf">CPF</label>
-                                <input id="cpf" name="cpf" type="text" label="Digite seu cpf" onChange={onChange}/>
+                                <input id="cpf" name="cpf" type="text" label="Digite seu cpf" onChange={formik.handleChange} value={formik.values.cpf}/>
                             </div>
+                            {formik.touched.cpf && formik.errors.cpf ? (
+                                <div className="mensagem">{formik.errors.cpf}</div>
+                            ) : null}
+
 
                             <div className="form__group">
                                 <label htmlFor="address">Endereço</label>
-                                <input id="address" name="address" type="text" label="Digite seu endereço" onChange={onChange}/>
+                                <input id="address" name="address" type="text" label="Digite seu endereço" onChange={formik.handleChange} value={formik.values.address}/>
                             </div>
+                            {formik.touched.address && formik.errors.address ? (
+                                <div className="mensagem">{formik.errors.address}</div>
+                            ) : null}
+
 
                             <div className="form__group">
                                 <label htmlFor="birthDate">Data de Nascimento</label>
-                                <input id="birthDate" name="birthDate" type="text" label="Digite sua data de nascimento" onChange={onChange}/>
+                                <input id="birthDate" name="birthDate" type="text" label="Digite sua data de nascimento" onChange={formik.handleChange} value={formik.values.birthDate}/>
                             </div>
+                            {formik.touched.birthDate && formik.errors.birthDate ? (
+                                <div className="mensagem">{formik.errors.birthDate}</div>
+                            ) : null}
+
 
                             <div className="form__group">
                                 <label htmlFor="email">E-mail</label>
-                                <input id="email" name="email" type="text" label="Digite seu e-mail" onChange={onChange}/>
+                                <input id="email" name="email" type="text" label="Digite seu e-mail" onChange={formik.handleChange} value={formik.values.email}/>
                             </div>
+                            {formik.touched.email && formik.errors.email ? (
+                                <div className="mensagem">{formik.errors.email}</div>
+                            ) : null}
+
 
                             <div className="form__group">
                                 <label htmlFor="password">Senha</label>
-                                <input id="password" name="password" type="text" label="Digite sua senha" onChange={onChange}/>
+                                <input id="password" name="password" type="text" label="Digite sua senha" onChange={formik.handleChange} value={formik.values.password}/>
                             </div>
+                            {formik.touched.password && formik.errors.password ? (
+                                <div className="mensagem">{formik.errors.password}</div>
+                            ) : null}
+
 
                             <div className="form-button">
                                 <div>
